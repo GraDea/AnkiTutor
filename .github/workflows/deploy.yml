@@ -27,7 +27,7 @@ jobs:
 
       - name: Build & Submit Container
         run: |
-          gcloud builds submit --quiet --suppress-logs \
+          gcloud builds submit \
             --tag gcr.io/${{ env.GCP_PROJECT }}/telegrambot
 
       - name: Deploy to Cloud Run
