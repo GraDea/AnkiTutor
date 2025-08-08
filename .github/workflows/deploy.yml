@@ -27,7 +27,7 @@ jobs:
 
       - name: Build & Submit Container
         run: |
-          gcloud builds submit --verbosity=debug \
+          gcloud builds submit  --gcs-log-dir=gs://perimeter-logs --verbosity=debug \
             --tag gcr.io/${{ env.GCP_PROJECT }}/telegrambot
 
       - name: Deploy to Cloud Run
