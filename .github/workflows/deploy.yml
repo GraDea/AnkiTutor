@@ -10,6 +10,7 @@ jobs:
     runs-on: ubuntu-latest
     env:
       GCP_PROJECT: ${{ secrets.GCP_PROJECT }}
+      GCP_REGION: us-central1
     steps:
       - name: Checkout
         uses: actions/checkout@v3
